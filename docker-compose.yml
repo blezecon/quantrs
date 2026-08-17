@@ -1,0 +1,10 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: quantrs
+    environment:
+      - RUST_LOG=info
+    stdin_open: true   # keep STDIN open (docker run -i)
+    tty: true           # allocate a pseudo-TTY (docker run -t)
